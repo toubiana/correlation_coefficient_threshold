@@ -205,30 +205,38 @@
 ## -------------------------------------------------LICENSE END-------------------------------------------------------------------------##
 
 ## --------------------------------------------------FUNCTIONS--------------------------------------------------------------------------##
-correlation.thresholds <- function(data, min.r,max.r,cor.method='pearson'){
+correlation.thresholds <- function(data, 
+                                   min.r = 0, max.r = 1, rvalue.intervals= 11,
+                                   p.min = 0.01, p.max = 0.05, pvalue.intervals = 5 ,
+                                   cor.method = 'pearson'){
+#   function that takes in a normalized dataset param =data and the minimum and maximum r values
+#   constructs a correlation matrix and corresponding p-value matrix.
+#   networks are constructed from varying thresholds and then subjected to network generation
+#   the networks are being analyzed for network measures
+#   the return value contains a dataframe that contains the different constellation of r
+#   and p-values with corresponding network measures
+#   parameter method holds which correlation to run: pearson, spearman etc.
+  
   # first create correlation matrix and corresponding p-value matrix by calling function correlation.network
   print("function: correlation thresholds")
-  cor.network <- correlation.network(data,cor.method)
+  cor.network <- correlation.network(data,cor.method = cor.method)
   cor <- cor.network@cor.matrix  # by default pearson correlation
   # for the next call, the test_cor function must be preloaded
   p.cor <- cor.network@p.value.mat
   
+  p.seq <- seq(p.min,p.max,length.out=pvalue.intervals)
+  r.seq <- seq(min.r,max.r,length.out=rvalue.intervals)
+  
   # prepare a matrix that contains return values
-  network.measures <- matrix(nrow=231,ncol=8)  # this is hard coded
+  network.measures <- matrix(nrow=length(r.seq)*length(p.seq),ncol=8)  # this is hard coded
   colnames(network.measures) <- c("r-value","p-value","nnode","nedges",
                                   "degree","density","clust.coef","diameter")
   
-  index.seq <- seq(1,231,21)
-  r.seq <- seq(min.r,max.r,(max.r-min.r)/10) # divide into 11 bins, from r.min to r.max
-  network.measures[index.seq,1] <-  r.seq
-  network.measures[,2] <- rep(seq(0.01,0.05,0.01),11)
-  #network.measures[,2] <- rep(c(seq(0.001,0.01,0.001),seq(0.02,0.05,0.01)),11)
-  #network.measures[,2] <- rep(seq(0.006,0.01,0.001),11)
+  
   # now run nested for loops to go over thresholds r
   count  <- 1 # count variable for the row index of network measure table
   for (r in r.seq){
-        for(p in seq(0.01,0.05,0.01)){  # hard coded to always go from p-values 0.01 to 0.05
-      # do the networks here
+    for(p in p.seq){ 
      print(paste0('r: ',r,' p: ',p))
       # create r coefficient network for specific r and p values
       # call function correlation.network.thresh
@@ -256,7 +264,7 @@ correlation.thresholds <- function(data, min.r,max.r,cor.method='pearson'){
       diameter <- diameter(gr1,unconnected=T)
       
       #fill values into return table: network.measures
-      network.measures[count,3:8] <- c(num.nodes,num.edges,degree,
+      network.measures[count,] <- c(r,p,num.nodes,num.edges,degree,
                                        density,clus.coef,diameter)
       # increment count
       count  <- count + 1
