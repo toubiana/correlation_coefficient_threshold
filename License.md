@@ -10,24 +10,24 @@ Original license written by Andras Varga and modified by David Toubiana (license
  
 Preamble
  
-This license contains the terms and conditions of using the source code for GENETIC_ALGORIHM in noncommercial settings: at academic
+This license contains the terms and conditions of using the source code for CORRELATION THRESHOLDS in noncommercial settings: at academic
 institutions for teaching and research use, and at non-profit research organizations. You will find that this license provides 
-noncommercial users of the source code for the GENETIC_ALGORIHM with rights that are similar to the well-known GNU General Public License, 
-yet it retains the possibility for the source code for the GENETIC_ALGORIHM authors to financially support the development by selling 
-commercial licenses. In fact, if you intend to use the source code for the GENETIC_ALGORIHM in a “for-profit” environment, where research
+noncommercial users of the source code for the CORRELATION THRESHOLDS with rights that are similar to the well-known GNU General Public License, 
+yet it retains the possibility for the source code for the CORRELATION THRESHOLDS authors to financially support the development by selling 
+commercial licenses. In fact, if you intend to use the source code for the CORRELATION THRESHOLDS in a “for-profit” environment, where research
 is conducted to develop or enhance a product, is used in a commercial service offering, or when a commercial company uses the source 
-code for the GENETIC_ALGORIHM to participate in a research project (for example government-funded or EU-funded research projects), 
-then you need to obtain a commercial license for the source code for the GENETIC_ALGORIHM. In that case, please contact the Author to
+code for the CORRELATION THRESHOLDS to participate in a research project (for example government-funded or EU-funded research projects), 
+then you need to obtain a commercial license for the source code for the CORRELATION THRESHOLDS. In that case, please contact the Author to
 inquire about commercial licenses.
  
 What are the rights given to noncommercial users? Similarly to GPL, you have the right to use the software, to distribute copies, to 
 receive source code, to change the software and distribute your modifications or the modified software. Also similarly to the GPL, 
 if you distribute verbatim or modified copies of this software, they must be distributed under this license.
  
-By modeling the GPL, this license guarantees that you’re safe when using the source code for the GENETIC_ALGORIHM in your work, for 
-teaching or research. This license guarantees that the source code for the GENETIC_ALGORIHM will remain available free of charge for 
-nonprofit use. You can modify the source code for the GENETIC_ALGORIHM to your purposes, and you can also share your modifications. 
-Even in the unlikely case of the authors abandoning the source code for the GENETIC_ALGORIHM entirely, this license permits anyone to 
+By modeling the GPL, this license guarantees that you’re safe when using the source code for the CORRELATION THRESHOLDS in your work, for 
+teaching or research. This license guarantees that the source code for the CORRELATION THRESHOLDS will remain available free of charge for 
+nonprofit use. You can modify the source code for the CORRELATION THRESHOLDS to your purposes, and you can also share your modifications. 
+Even in the unlikely case of the authors abandoning the source code for the CORRELATION THRESHOLDS entirely, this license permits anyone to 
 continue developing it from the last release, and to create further releases under this license.
  
 We believe that the combination of noncommercial open-source and commercial licensing will be beneficial for the whole user community, 
@@ -39,7 +39,7 @@ The precise terms and conditions for using, copying, distribution and modificati
 TERMS AND CONDITIONS FOR USE, COPYING, DISTRIBUTION AND MODIFICATION
  Definitions
  
-“Program” means a copy of the source code for the GENETIC_ALGORIHM, which is said to be distributed under this Academic Public License.
+“Program” means a copy of the source code for the CORRELATION THRESHOLDS, which is said to be distributed under this Academic Public License.
  
 “Work based on the Program” means either the Program or any derivative work under copyright law: that is to say, a work containing the 
 Program or a portion of it, either verbatim or with modifications and/or translated into another language. (Hereinafter, translation is 
